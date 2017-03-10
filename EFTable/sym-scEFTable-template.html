@@ -1,0 +1,20 @@
+<div style="width:100%; height:100%; overflow:hidden;">
+    <table style="width:100%; height:100%; border:none; border-collapse: collapse; font-family:Arial; text-align:center;">
+        <tr>
+            <th ng-repeat="header in ['Flight Number','Depart Time', 'Arrival Time', 'Routing', 'Current Position','Altitude','Track','Speed','Squawk'] track by $index" style="font-weight: 600; vertical-align: middle; padding: 0px; border: black solid 1px; width: 7%; color: gray; background-color: rgb(240,240,240);">{{header}}</th>
+        </tr>
+        <tr ng-repeat="well in drawdata track by $index" style="">
+            <td ng-repeat="element in well track by $index" style="vertical-align: middle; padding: 0px; border: black solid 1px; width: 7%; background-color: #fff;">
+                <div ng-show="$index==0" style="color: #000;">{{element}}</div>
+		<div ng-show="$index==1" style="color: #000;">{{element}}</div>
+		<div ng-show="$index==2" style="color: #000;">{{element}}</div>
+                <div ng-show="$index==3" style="font-weight: 600; color: #666;">{{element}}</div>
+		<div ng-show="$index==4" style="color: #666;">{{element}}</div>
+		<div ng-show="$index==5" style="color: #666;">{{element}}</div>
+		<div ng-show="$index==6" style="color: #666;">{{element}}</div>
+		<div ng-show="$index==7" style="color: #666;">{{element}}</div>
+		<div ng-show="$index==8" style="color: #666;">{{element}}</div>
+            </td>
+        </tr>
+    </table>
+</div>
